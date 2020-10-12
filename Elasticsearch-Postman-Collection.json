@@ -17,7 +17,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_cat",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -42,7 +42,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_cat/allocation?v",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -68,7 +68,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_cluster/health",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -114,7 +114,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_cluster/stats",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -134,7 +134,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_cluster/allocation/explain",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -155,7 +155,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_cat/nodes?v",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -181,7 +181,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_cluster/reroute?retry_failed=true",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -207,7 +207,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_nodes",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -234,7 +234,7 @@
 						},
 						"url": {
 							"raw": "{{url}}/_cluster/settings",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -260,7 +260,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_tasks?detailed=true&actions=*",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -289,7 +289,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_tasks?detailed=true&actions=*",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -318,7 +318,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_tasks/{{nodeid}}:{{id}}/_cancel",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -375,7 +375,7 @@
 						},
 						"url": {
 							"raw": "{{url}}/_snapshot/{{repository}}",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -395,7 +395,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_snapshot/{{repository}}/{{snapshot}}wait_for_completion=true",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -416,7 +416,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_snapshot/{{reposirtory}}/_all",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -437,7 +437,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_snapshot/{{repository}}/{{snapshot}}",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -458,7 +458,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_snapshot/{{repository}}/{{snapshot}}/_status",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -480,7 +480,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_cat/snapshots/backup?v&s=start_epoch:desc",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -511,7 +511,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_snapshot/{{repository}}/05-07-2018*",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -532,7 +532,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_snapshot/{{repository}}/{{snapshot}}",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -589,7 +589,7 @@
 						},
 						"url": {
 							"raw": "{{url}}/_template/default",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -609,7 +609,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_template/{{template}}",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -635,7 +635,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_cat/indices?v&s=store.size:desc",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -665,7 +665,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/{{index}}",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -692,7 +692,7 @@
 						},
 						"url": {
 							"raw": "{{url}}/_reindex",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -711,7 +711,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_all",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -738,7 +738,7 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{index}}/_cache/clear",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -767,7 +767,7 @@
 						},
 						"url": {
 							"raw": "{{url}}/_recovery?human",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -800,7 +800,7 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{index}}/_recovery?human",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -834,7 +834,7 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{index}}/_shard_stores",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -862,7 +862,7 @@
 						},
 						"url": {
 							"raw": "{{url}}/_shard_stores?status=red",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -895,7 +895,7 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{index}}/_refresh",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -923,7 +923,7 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{index}}/_flush",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -951,7 +951,7 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{index}}/_settings",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -979,7 +979,7 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{index}}/_settings",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -1035,7 +1035,7 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{index}}/_alias/{{alias}}",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -1064,7 +1064,7 @@
 						},
 						"url": {
 							"raw": "{{url}}/_aliases",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -1083,7 +1083,7 @@
 						"body": {},
 						"url": {
 							"raw": "{{url}}/_cat/aliases?v",
-							"protocol": "http",
+							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
