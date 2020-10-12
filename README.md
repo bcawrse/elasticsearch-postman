@@ -7,6 +7,8 @@ At a minimum you will need to set the {{url}} variable. This should include the 
 # Variables used within the collection
 ### url
 The base URL for your Elasticsearch instance or cluster. This needs to include the port number (if required), such as http://elasticsearch:9200
+### authorization
+Authorization header for authenticating. For Basic authentication, use `Basic base64_encoded_username:password`.
 ### index
 The index in which you are performing operations
 ### alias
