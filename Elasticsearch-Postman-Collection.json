@@ -1,23 +1,26 @@
 {
 	"info": {
-		"_postman_id": "6be7be00-f5ed-488b-bfa5-49ffcaf2498e",
+		"_postman_id": "54edde92-fc73-4f57-898b-02bec0abbf00",
 		"name": "Elasticsearch Management",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "Cat",
-			"description": "",
 			"item": [
 				{
 					"name": "All",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_cat",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -28,21 +31,25 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Cluster",
-			"description": "",
 			"item": [
 				{
 					"name": "Disk Allocation",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_cat/allocation?v",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -64,11 +71,15 @@
 					"name": "Cluster Health",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_cluster/health",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -86,7 +97,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ed2e1edb-9318-4bab-a220-a1dbc315833b",
+								"id": "45c06f03-8e3d-4f75-a2a6-7a5bf75890d4",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
@@ -110,11 +121,15 @@
 					],
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_cluster/stats",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -130,11 +145,15 @@
 					"name": "Allocation Explain",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_cluster/allocation/explain",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -151,11 +170,15 @@
 					"name": "View nodes",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_cat/nodes?v",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -177,11 +200,15 @@
 					"name": "Reroute",
 					"request": {
 						"method": "POST",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_cluster/reroute?retry_failed=true",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -203,11 +230,15 @@
 					"name": "Node Info ",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_nodes",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -226,6 +257,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -234,7 +270,6 @@
 						},
 						"url": {
 							"raw": "{{url}}/_cluster/settings",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -246,21 +281,25 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Tasks",
-			"description": null,
 			"item": [
 				{
 					"name": "List Tasks",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_tasks?detailed=true&actions=*",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -285,11 +324,15 @@
 					"name": "Task Status",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_tasks?detailed=true&actions=*",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -314,11 +357,15 @@
 					"name": "Cancel Task",
 					"request": {
 						"method": "POST",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_tasks/{{nodeid}}:{{id}}/_cancel",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -336,7 +383,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "85fbbd6e-bfe4-465c-90e8-f66e4fb68427",
+						"id": "40d2fd49-3eb1-4cce-becd-9507e59d99d1",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -346,18 +393,18 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "0fec72cb-1386-4ec8-8b37-244a7fc33da8",
+						"id": "d9d48fc6-87e6-4b61-850a-6301dde75a49",
 						"type": "text/javascript",
 						"exec": [
 							""
 						]
 					}
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Snapshots",
-			"description": "",
 			"item": [
 				{
 					"name": "Create Repository",
@@ -367,6 +414,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -375,7 +427,6 @@
 						},
 						"url": {
 							"raw": "{{url}}/_snapshot/{{repository}}",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -391,11 +442,15 @@
 					"name": "Create Snapshot",
 					"request": {
 						"method": "PUT",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_snapshot/{{repository}}/{{snapshot}}wait_for_completion=true",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -412,11 +467,15 @@
 					"name": "View Repository Snapshots",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_snapshot/{{reposirtory}}/_all",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -433,11 +492,15 @@
 					"name": "Snapshot Details",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_snapshot/{{repository}}/{{snapshot}}",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -454,11 +517,15 @@
 					"name": "Snapshot Status",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_snapshot/{{repository}}/{{snapshot}}/_status",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -476,11 +543,15 @@
 					"name": "Cat snapshots",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_cat/snapshots/backup?v&s=start_epoch:desc",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -507,11 +578,15 @@
 					"name": "Snapshot Search",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_snapshot/{{repository}}/05-07-2018*",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -528,11 +603,15 @@
 					"name": "Delete Snapshot",
 					"request": {
 						"method": "DELETE",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_snapshot/{{repository}}/{{snapshot}}",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -550,7 +629,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "85f67bff-edd4-4bf2-a310-bca66f4aa84d",
+						"id": "a97a6ea0-94cc-4880-bb7d-879e0db798af",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -560,18 +639,18 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e57644af-7103-432e-b7ea-a066a2adcab0",
+						"id": "7c521b77-37ab-4504-9846-e23f8bb12e4d",
 						"type": "text/javascript",
 						"exec": [
 							""
 						]
 					}
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Templates",
-			"description": null,
 			"item": [
 				{
 					"name": "Save Template",
@@ -581,6 +660,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -589,7 +673,6 @@
 						},
 						"url": {
 							"raw": "{{url}}/_template/default",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -605,11 +688,15 @@
 					"name": "Template Details",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_template/{{template}}",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -621,21 +708,25 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Indexes",
-			"description": "",
 			"item": [
 				{
 					"name": "List all indexes",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_cat/indices?v&s=store.size:desc",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -661,11 +752,15 @@
 					"name": "Delete Index",
 					"request": {
 						"method": "DELETE",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/{{index}}",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -684,6 +779,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -692,7 +792,6 @@
 						},
 						"url": {
 							"raw": "{{url}}/_reindex",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -707,11 +806,15 @@
 					"name": "Delete All",
 					"request": {
 						"method": "DELETE",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_all",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -730,6 +833,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -738,7 +846,6 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{index}}/_cache/clear",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -759,15 +866,15 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"actions\" : [\n        { \"add\" : { \"index\" : \"cdsdev2_customer_5a95aaadd9f37f55839205b757e4458200618c27\", \"alias\" : \"customer\" } }\n    ]\n}"
-						},
 						"url": {
 							"raw": "{{url}}/_recovery?human",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -792,15 +899,15 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"actions\" : [\n        { \"add\" : { \"index\" : \"cdsdev2_customer_5a95aaadd9f37f55839205b757e4458200618c27\", \"alias\" : \"customer\" } }\n    ]\n}"
-						},
 						"url": {
 							"raw": "{{url}}/{{index}}/_recovery?human",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -826,15 +933,15 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"actions\" : [\n        { \"add\" : { \"index\" : \"cdsdev2_customer_5a95aaadd9f37f55839205b757e4458200618c27\", \"alias\" : \"customer\" } }\n    ]\n}"
-						},
 						"url": {
 							"raw": "{{url}}/{{index}}/_shard_stores",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -854,15 +961,15 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"actions\" : [\n        { \"add\" : { \"index\" : \"cdsdev2_customer_5a95aaadd9f37f55839205b757e4458200618c27\", \"alias\" : \"customer\" } }\n    ]\n}"
-						},
 						"url": {
 							"raw": "{{url}}/_shard_stores?status=red",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -887,6 +994,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -895,7 +1007,6 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{index}}/_refresh",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -915,6 +1026,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -923,7 +1039,6 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{index}}/_flush",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -943,6 +1058,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -951,7 +1071,6 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{index}}/_settings",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -971,15 +1090,15 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"index\" : {\n        \"number_of_replicas\" : 1\n    }\n}"
-						},
 						"url": {
 							"raw": "{{url}}/{{index}}/_settings",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -996,7 +1115,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "3b73ac2e-cbb4-46ba-a919-98a522b9d8af",
+						"id": "69f49ffc-6b87-4f12-afaa-f485f7303263",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1006,18 +1125,18 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "cd4d4b5d-066c-4745-8b44-4d4a380c7897",
+						"id": "7fe0ca5e-a6e5-493a-b258-5d2586cc4f0f",
 						"type": "text/javascript",
 						"exec": [
 							""
 						]
 					}
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Alias",
-			"description": "",
 			"item": [
 				{
 					"name": "Delete Alias",
@@ -1027,6 +1146,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -1035,7 +1159,6 @@
 						},
 						"url": {
 							"raw": "{{url}}/{{index}}/_alias/{{alias}}",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -1056,6 +1179,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -1064,7 +1192,6 @@
 						},
 						"url": {
 							"raw": "{{url}}/_aliases",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -1079,11 +1206,15 @@
 					"name": "Display all aliases",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/_cat/aliases?v",
-							"protocol": "https",
 							"host": [
 								"{{url}}"
 							],
@@ -1106,7 +1237,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "d940a5dc-985d-4b71-87d2-4086e401241c",
+						"id": "ce2f24ed-588c-4e0a-9727-c3aea5bd6297",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1116,14 +1247,16 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "42493cd3-b540-4e58-b66c-1bb89501a7e6",
+						"id": "73b2b2a2-60f5-4797-b88a-c7136b14cd2c",
 						"type": "text/javascript",
 						"exec": [
 							""
 						]
 					}
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }
